@@ -3,7 +3,7 @@ React Native and Expo Todo App for Go Grab Assignment.
 
 ## App Demo
 
-https://user-images.githubusercontent.com/42822912/223900496-52e90ae3-8402-4f7b-811f-30cfd33fbf5e.mov
+
 
 ## Features
 
@@ -11,7 +11,6 @@ https://user-images.githubusercontent.com/42822912/223900496-52e90ae3-8402-4f7b-
 2. **`Edit Tasks/Reminders`** (Users can edit existent tasks and reminders)
 3. **`Delete Tasks/Reminders`** (Users can delete tasks and reminders)
 4. **`Mark Tasks as Done`** (Users can mark a task as done)
-5. **`Turn Off/On Reminders Notifications`** ((An Extra Feature)Users can turn off or on reminders notifications)
 
 ## App Technical Information
 
