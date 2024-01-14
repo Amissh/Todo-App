@@ -1,8 +1,11 @@
 # React Native Todo App
 React Native and Expo Todo App for Go Grab Assignment.
+![Screenshots](https://github.com/Amissh/Todo-App/assets/101784637/f7a50be0-9b8f-451e-9d6e-adfe1238a434)
 
 ## App Demo
 
+
+https://github.com/Amissh/Todo-App/assets/101784637/bec32db3-13a7-4ffb-bf53-47e793436d86
 
 
 ## Features
