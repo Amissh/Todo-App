@@ -1,6 +1,11 @@
 # React Native Todo App
 React Native and Expo Todo App for Go Grab Assignment.
 
+### Steps to run the app
+
+1. Install all the required dependencies using 'npm install'.
+2. Run 'expo start'.
+3. For physical android device, use expo application to scan the qr code or add the URL, inorder to run the application on the device.
 
 ![Screenshots](https://github.com/Amissh/Todo-App/assets/101784637/f7a50be0-9b8f-451e-9d6e-adfe1238a434)
 
