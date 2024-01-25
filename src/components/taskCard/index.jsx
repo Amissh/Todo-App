@@ -1,9 +1,17 @@
 import React from 'react'
-import { Image, TouchableWithoutFeedback, Text, View } from 'react-native'
+import { Image, TouchableOpacity, Text, View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { styles } from './styles'
-
 const TaskCard = ({ item, triggerEditTask, handleCheck, handleDelete }) => {
+  const navigation=useNavigation();
+  const navigateToTaskDetails=()=>{
+    navigation.navigate('TaskDetailsScreen',{
+      title:item.title,
+      description:item.description,
+    });
+  }
   return (
+    <TouchableOpacity onPress={navigateToTaskDetails}>
     <View style={styles.itemCard}>
       <View style={styles.cardHeader}>
         <Text style={styles.cardTitle}>{item.title}</Text>
@@ -22,7 +30,7 @@ const TaskCard = ({ item, triggerEditTask, handleCheck, handleDelete }) => {
         </View>
 
         <View style={styles.cardActions}>
-          <TouchableWithoutFeedback onPress={() => handleCheck(item.id)}>
+          <TouchableOpacity onPress={() => handleCheck(item.id)}>
             <View style={styles.cardActionButton}>
               {item.done ? (
                 <Image style={styles.cardActionIcon} source={require('../../assets/uncheck.png')} />
@@ -30,20 +38,21 @@ const TaskCard = ({ item, triggerEditTask, handleCheck, handleDelete }) => {
                 <Image style={styles.cardActionIcon} source={require('../../assets/check.png')} />
               )}
             </View>
-          </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={() => triggerEditTask(item)}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => triggerEditTask(item)}>
             <View style={styles.cardActionButton}>
               <Image style={styles.cardActionIcon} source={require('../../assets/edit.png')} />
             </View>
-          </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={() => handleDelete(item.id)}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => handleDelete(item.id)}>
             <View style={styles.cardActionButton}>
               <Image style={styles.cardActionIcon} source={require('../../assets/delete.png')} />
             </View>
-          </TouchableWithoutFeedback>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
+    </TouchableOpacity>
   )
 }
 

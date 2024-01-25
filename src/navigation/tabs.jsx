@@ -1,19 +1,20 @@
 import { Image, StyleSheet } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { TodoScreen, RemindersScreen, SettingsScreen } from '../screens'
+import {SettingsScreen } from '../screens'
 import { colors, fonts } from '../theme'
+import TaskStack from './TaskStack'
 
 const Tab = createBottomTabNavigator()
 
 const TabsNavigator = () => {
   return (
     <Tab.Navigator initialRouteName="Tasks" screenOptions={screenOptions}>
-      <Tab.Screen name="Tasks" component={TodoScreen} />
-      {/* <Tab.Screen name="Reminders" component={RemindersScreen} /> */}
+      <Tab.Screen name="Tasks" component={TaskStack} />
       <Tab.Screen name="Settings" component={SettingsScreen} />
     </Tab.Navigator>
   )
 }
+
 
 const screenOptions = ({ route }) => ({
   tabBarIcon: ({ focused }) => {
@@ -58,9 +59,6 @@ const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: colors.backgroundLight,
     height: 68,
-    borderTopWidth: 0,
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
     shadowOffset: {
       width: 0,
       height: 10

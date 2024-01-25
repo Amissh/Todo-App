@@ -56,8 +56,8 @@ const App = () => {
 
 const styles = StyleSheet.create({
   loaderContainer: {
-    flex: 1,
-    backgroundColor: colors.backgroundLight,
+    flex: 0,
+    backgroundColor:'#ffff06',
     justifyContent: 'center',
     alignItems: 'center'
   }

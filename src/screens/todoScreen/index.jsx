@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { View, Alert } from 'react-native'
+import { View, Alert,Button,TextInput } from 'react-native'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { addTask, toggleDone, editTask, removeTask } from '../../store/actions/tasks.actions'
@@ -27,7 +27,7 @@ const TodoScreen = () => {
     done: false
   })
   const [taskToEdit, setTaskToEdit] = useState(null)
-
+  const [searchItem,setSearchItem]=useState('')
   const triggerEditTask = task => {
     setTaskToEdit(task)
     setEditModalVisible(true)
@@ -102,9 +102,14 @@ const TodoScreen = () => {
     <>
       <View style={styles.container}>
         <Header title="Tasks List" subtitle="Add, delete or mark as done a task" />
-
+        <TextInput placeholder="Search" 
+          style={{ backgroundColor: 'white',height:40,margin:10,padding:5}}
+          value={searchItem}
+          onChangeText={item=>setSearchItem(item)}
+        ></TextInput>
         <TasksList
           tasks={tasks}
+          searchItem={searchItem}
           flatListRef={flatListRef}
           triggerEditTask={triggerEditTask}
           handleCheck={handleCheck}
