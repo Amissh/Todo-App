@@ -1,7 +1,9 @@
 # React Native Todo App
 React Native and Expo Todo App for Go Grab Assignment.
 
-![Screenshots](https://github.com/Amissh/Todo-App/assets/101784637/f7a50be0-9b8f-451e-9d6e-adfe1238a434)
+![Screenshot 2024-01-25 232031](https://github.com/Amissh/Modified_todo/assets/101784637/e957e515-69eb-47e1-81f2-7cea39fcdc12)
+
+![Screenshot 2024-01-25 232047](https://github.com/Amissh/Modified_todo/assets/101784637/d4de2069-91fe-4a85-a8ac-69ed5b1dc323)
 
 
 ### Steps to run the app
@@ -10,18 +12,13 @@ React Native and Expo Todo App for Go Grab Assignment.
 2. Run 'expo start'.
 3. For physical android device, use expo application to scan the qr code or add the URL, inorder to run the application on the device.
 
-## App Demo
-
-
-https://github.com/Amissh/Todo-App/assets/101784637/bec32db3-13a7-4ffb-bf53-47e793436d86
-
-
 ## Features
 
 1. **`Add Tasks/Reminders`** (Users can add tasks and reminders)
 2. **`Edit Tasks/Reminders`** (Users can edit existent tasks and reminders)
 3. **`Delete Tasks/Reminders`** (Users can delete tasks and reminders)
 4. **`Mark Tasks as Done`** (Users can mark a task as done)
+5. **`Search from the title`** (Users can filter the task)
 
 ## App Technical Information
 
